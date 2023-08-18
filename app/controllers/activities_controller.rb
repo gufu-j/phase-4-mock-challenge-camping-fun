@@ -2,8 +2,7 @@ class ActivitiesController < ApplicationController
  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
     def index
-        activities = Activity.all
-        render json: activities
+        render json: Activity.all
     end
 
     def destroy
